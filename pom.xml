@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-        <groupId>net.sf.taverna</groupId>
-        <artifactId>parent</artifactId>
-        <version>0.1.2009-02-12</version>
-    </parent>
+		<groupId>net.sf.taverna</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.2.2010-09-06</version>
+	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>jaxb-any</artifactId>
 	<name>JAXB AnyElement question</name>
@@ -37,5 +37,16 @@
 		</dependency>
 	</dependencies>
 
+	<repositories>
+		<repository>
+			<releases />
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>mygrid-repository</id>
+			<name>myGrid Repository</name>
+			<url>http://www.mygrid.org.uk/maven/repository</url>
+		</repository>
+	</repositories>
 
 </project>
