@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://example.com/schema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:schema="http://example.com/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<!-- See http://docs.rakeshv.org/java/jaxb/users-guide/jaxb-custom.html -->
+			<jaxb:globalBindings />
+			<jaxb:schemaBindings>
+				<jaxb:package name="com.example.schema" />
+			</jaxb:schemaBindings>
+		</xsd:appinfo>
+	</xsd:annotation>
+
+	<xsd:element name="container" type="schema:Container"></xsd:element>
+
+	<xsd:complexType name="Container">
+		<xsd:sequence>
+			<xsd:element name="rootFiles">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"
+							processContents="lax">
+							<xsd:annotation>
+								<xsd:appinfo>
+									<jaxb:property name="any2" />
+								</xsd:appinfo>
+							</xsd:annotation>
+						</xsd:any>
+						<xsd:element name="rootFile" maxOccurs="unbounded"
+							minOccurs="1">
+							<xsd:complexType>
+								<xsd:attribute name="path" />
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:any namespace="##other" minOccurs="0" maxOccurs="unbounded"
+							processContents="lax">
+							<xsd:annotation>
+								<xsd:appinfo>
+									<jaxb:property name="any3" />
+								</xsd:appinfo>
+							</xsd:annotation>
+						</xsd:any>
+					</xsd:sequence>
+					<xsd:anyAttribute namespace="##other"
+						processContents="lax" />
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
