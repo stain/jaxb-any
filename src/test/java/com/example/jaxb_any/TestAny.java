@@ -29,13 +29,15 @@ public class TestAny {
 
 		Container container = element.getValue();
 
-		assertEquals(1, container.getRootFiles().getAny2().size());
-		assertEquals(1, container.getRootFiles().getAny3().size());
+		assertEquals(1, container.getRootFiles().getAnyBefore().size());
+		assertEquals(1, container.getRootFiles().getAnyAfter().size());
 
-		Element any2_0 = (Element) container.getRootFiles().getAny2().get(0);
+		Element any2_0 = (Element) container.getRootFiles().getAnyBefore()
+				.get(0);
 		assertEquals("before rootFile", any2_0.getTextContent());
 
-		Element any3_0 = (Element) container.getRootFiles().getAny3().get(0);
+		Element any3_0 = (Element) container.getRootFiles().getAnyAfter()
+				.get(0);
 		assertEquals("after rootFile", any3_0.getTextContent());
 	}
 

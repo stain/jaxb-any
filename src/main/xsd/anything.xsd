@@ -26,7 +26,7 @@
 							processContents="lax">
 							<xsd:annotation>
 								<xsd:appinfo>
-									<jaxb:property name="any2" />
+									<jaxb:property name="anyBefore" />
 								</xsd:appinfo>
 							</xsd:annotation>
 						</xsd:any>
@@ -40,7 +40,7 @@
 							processContents="lax">
 							<xsd:annotation>
 								<xsd:appinfo>
-									<jaxb:property name="any3" />
+									<jaxb:property name="anyAfter" />
 								</xsd:appinfo>
 							</xsd:annotation>
 						</xsd:any>
