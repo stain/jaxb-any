@@ -2,8 +2,8 @@
 <container xmlns="http://example.com/schema"
 	xmlns:other="http://example.com/other">
 	<rootFiles>
-		<other:first>first</other:first>
+		<other:before>before rootFile</other:before>
 		<rootFile path="test" />
-		<other:second>second</other:second>
+		<other:after>after rootFile</other:after>
 	</rootFiles>
 </container>

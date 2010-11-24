@@ -33,10 +33,10 @@ public class TestAny {
 		assertEquals(1, container.getRootFiles().getAny3().size());
 
 		Element any2_0 = (Element) container.getRootFiles().getAny2().get(0);
-		assertEquals("first", any2_0.getTextContent());
+		assertEquals("before rootFile", any2_0.getTextContent());
 
 		Element any3_0 = (Element) container.getRootFiles().getAny3().get(0);
-		assertEquals("second", any2_0.getTextContent());
+		assertEquals("after rootFile", any3_0.getTextContent());
 	}
 
 }
